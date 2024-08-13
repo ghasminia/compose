@@ -5,8 +5,8 @@ services:
       - ./data:/sync-folder
     container_name: lftp-sync
     environment:
-      FTP_USER: "Vp70lRv9gOUxzH8O"
-      FTP_PASS: "ATTo0tTf0n9hFGSMmO6fIJzUSR9O6QpH"
-      FTP_HOST: "c829010.parspack.net"
+      FTP_USER: "user"
+      FTP_PASS: "pass"
+      FTP_HOST: "host"
       REMOTE_FOLDER: "/static"
     restart: always
