@@ -1,0 +1,9 @@
+services:
+  lsyncd:
+    build: .
+    container_name: lsyncd
+    volumes:
+      - /root/projects/web-php/src:/source
+      - ./src:/target
+      - ./lsyncd.conf.lua:/etc/lsyncd/lsyncd.conf.lua
+    restart: always
