@@ -1,6 +1,6 @@
 services:
   lsyncd:
-    build: .
+    image: ghaseminia/lsync:1.0
     container_name: lsyncd
     volumes:
       - /root/projects/web-php/src:/source
