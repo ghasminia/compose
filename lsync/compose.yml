@@ -2,8 +2,13 @@ services:
   lsyncd:
     image: ghaseminia/lsync:1.1
     container_name: lsyncd
+    environment:
+      - SSHPASS=Ra5LENUpcL9GoU9W9B
     volumes:
-      - /root/projects/web-php/src:/source
-      - ./src:/target
+      - /root/projects/backup:/source
       - ./lsyncd.conf.lua:/etc/lsyncd/lsyncd.conf.lua
+      - ./known_hosts:/root/.ssh/known_hosts
+      - ./rsync_with_sshpass.sh:/usr/local/bin/rsync_with_sshpass.sh
     restart: always
+
+# Run this command for create known_hosts ssh-keyscan -H your_ip >> /root/projects/your_path
