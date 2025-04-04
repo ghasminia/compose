@@ -3,7 +3,7 @@ services:
     image: ghaseminia/lsync:1.1
     container_name: lsyncd
     environment:
-      - SSHPASS=Ra5LENUpcL9GoU9W9B
+      - SSHPASS=****
     volumes:
       - /root/projects/backup:/source
       - ./lsyncd.conf.lua:/etc/lsyncd/lsyncd.conf.lua
